@@ -15,6 +15,8 @@ echo "Installing homebrew"
 
 echo "Install cask"
 brew tap caskroom/cask
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-drivers
 
 echo "Install xcode-select --install"
 xcode-select --install
