@@ -84,11 +84,11 @@ brew cask install google-chrome
 echo "Install chrome canary"
 brew cask install homebrew/cask-versions/google-chrome-canary
 
-echo "Install firefox"
-brew cask install firefox
+# echo "Install firefox"
+# brew cask install firefox
 
-echo "Install firefox developer"
-brew cask install homebrew/cask-versions/firefox-developer-edition
+# echo "Install firefox developer"
+# brew cask install homebrew/cask-versions/firefox-developer-edition
 
 echo "Install brave"
 brew cask install brave
