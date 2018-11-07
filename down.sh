@@ -47,6 +47,9 @@ brew install yarn
 echo "Install zsh"
 brew install zsh
 
+echo "Install ruby - NEED MORE SETUP"
+brew install rbenv ruby-build
+
 echo "Install oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -83,12 +86,6 @@ brew cask install google-chrome
 
 echo "Install chrome canary"
 brew cask install homebrew/cask-versions/google-chrome-canary
-
-# echo "Install firefox"
-# brew cask install firefox
-
-# echo "Install firefox developer"
-# brew cask install homebrew/cask-versions/firefox-developer-edition
 
 echo "Install brave"
 brew cask install brave
@@ -138,9 +135,6 @@ brew cask install kap
 echo "Install slack"
 brew cask install slack
 
-echo "Install spark"
-brew cask install spark
-
 echo "Install notion"
 brew cask install notion
 
@@ -155,6 +149,7 @@ brew cask install dropbox
 
 echo "Finish install all app, check doc to complete these app setup : \n
 1. go \n
+3. ruby \n
 2. postgres \n
 3. maria db \n
 4. mongodb \n
