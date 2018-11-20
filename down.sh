@@ -90,6 +90,9 @@ brew cask install homebrew/cask-versions/google-chrome-canary
 echo "Install brave"
 brew cask install brave
 
+echo "Install brave dev"
+brew cask install brave-browser-dev
+
 echo "Install postman"
 brew cask install postman
 
