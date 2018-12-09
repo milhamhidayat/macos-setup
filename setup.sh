@@ -124,3 +124,4 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 echo "You need to restart to enable tap to click"
+echo "done"
