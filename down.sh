@@ -114,6 +114,9 @@ brew cask install iterm2
 echo "Install docker"
 brew cask install docker
 
+echo "Install kitematic"
+brew cask install kitematic
+
 echo "Install vscode"
 brew cask install visual-studio-code
 
