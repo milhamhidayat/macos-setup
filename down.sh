@@ -76,11 +76,6 @@ echo "======================================"
 brew install rbenv ruby-build
 
 echo "======================================"
-echo "Install oh my zsh"
-echo "======================================"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "======================================"
 echo "Install git"
 echo "======================================"
 brew install git
@@ -240,6 +235,12 @@ echo "======================================"
 echo "Install dropbox"
 echo "======================================"
 brew cask install dropbox
+
+echo "======================================"
+echo "Install oh my zsh"
+echo "Install last, because it will need your confirmation to change terminal shell"
+echo "======================================"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Finish install all app, check doc to complete these app setup : \n
 1. go \n
