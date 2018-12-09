@@ -252,7 +252,8 @@ echo "Finish install all app, check doc to complete these app setup : \n
 2. postgres \n
 3. maria db \n
 4. mongodb \n
-5. open in code \n
-6. vscode \n
-7. vscode insider \n
-8. iterm2 \n"
+5. vscode \n
+6. vscode insider \n
+7. iterm2 \n"
+
+echo "PLEASE RESTART"
