@@ -120,9 +120,6 @@ brew cask install visual-studio-code
 echo "Install vscode insider"
 brew cask install homebrew/cask-versions/visual-studio-code-insiders
 
-echo "Install open in code"
-brew cask install open-in-code
-
 echo "Install vlc"
 brew cask install vlc
 
@@ -132,8 +129,8 @@ brew cask install vox
 echo "Install sequel pro"
 brew cask install sequel-pro
 
-echo "Install kap"
-brew cask install kap
+echo "Install table plus"
+brew cask install tableplus
 
 echo "Install slack"
 brew cask install slack
