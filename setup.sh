@@ -83,10 +83,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Force Click
-# @TOCHECK
-defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
-
 # Enable tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -126,3 +122,5 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+echo "You need to restart to enable tap to click"
