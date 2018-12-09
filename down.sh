@@ -81,10 +81,14 @@ echo "======================================"
 brew install git
 
 echo "======================================"
-echo "set git email and username"
+echo "set git email and name"
+echo "What is your git name?"
+read gitname
+echo "What is your git email?"
+read gitemail
 echo "======================================"
-git config --global user.name "Your Name Here"
-git config --global user.email "your_email@youremail.com"
+git config --global user.name "$gitname"
+git config --global user.email "$gitemail"
 
 echo "======================================"
 echo "set git color output"
