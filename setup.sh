@@ -123,5 +123,8 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# fix font smoothing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
 echo "You need to restart to enable tap to click"
 echo "done"
