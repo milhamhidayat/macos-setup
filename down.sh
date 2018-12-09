@@ -138,7 +138,7 @@ brew cask install homebrew/cask-versions/google-chrome-canary
 echo "======================================"
 echo "Install brave"
 echo "======================================"
-brew cask install brave
+brew cask install brave-browser
 
 echo "======================================"
 echo "Install brave dev"
