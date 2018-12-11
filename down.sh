@@ -101,6 +101,11 @@ echo "======================================"
 git config --global format.pretty format:"%C(auto)%h %d%Creset %s%n%Cgreen%ad%Creset %aN <%aE>%n"
 
 echo "======================================"
+echo "set vscode as default git editor"
+echo "======================================"
+git config --global core.editor "code --wait"
+
+echo "======================================"
 echo "Install dep"
 echo "======================================"
 brew install dep
