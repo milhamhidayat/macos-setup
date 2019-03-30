@@ -39,7 +39,6 @@ echo "Install python3"
 echo "======================================"
 brew install python3
 
-
 echo "======================================"
 echo "Install go - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/go"
 echo "======================================"
@@ -99,11 +98,6 @@ echo "======================================"
 echo "custom git log"
 echo "======================================"
 git config --global format.pretty format:"%C(auto)%h %d%Creset %s%n%Cgreen%ad%Creset %aN <%aE>%n"
-
-echo "======================================"
-echo "set vscode as default git editor"
-echo "======================================"
-git config --global core.editor "code --wait"
 
 echo "======================================"
 echo "Install dep"
@@ -171,11 +165,6 @@ echo "======================================"
 brew cask install hyperswitch
 
 echo "======================================"
-echo "Install alfred"
-echo "======================================"
-brew cask install alfred
-
-echo "======================================"
 echo "Install iterm2 - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/iterm"
 echo "======================================"
 brew cask install iterm2
@@ -191,6 +180,26 @@ echo "======================================"
 brew cask install kitematic
 
 echo "======================================"
+echo "Install kubectl"
+echo "======================================"
+brew install kubernetes-cli
+
+echo "======================================"
+echo "Install aws-clie"
+echo "======================================"
+brew install aws-cli
+
+echo "======================================"
+echo "Install minikube"
+echo "======================================"
+brew cask install minikube
+
+echo "======================================"
+echo "Install kubernetic"
+echo "======================================"
+brew cask install kubernetic
+
+echo "======================================"
 echo "Install vscode"
 echo "======================================"
 brew cask install visual-studio-code
@@ -199,6 +208,11 @@ echo "======================================"
 echo "Install vscode insider"
 echo "======================================"
 brew cask install homebrew/cask-versions/visual-studio-code-insiders
+
+echo "======================================"
+echo "set vscode as default git editor"
+echo "======================================"
+git config --global core.editor "code --wait"
 
 echo "======================================"
 echo "Install vlc"
@@ -211,29 +225,9 @@ echo "======================================"
 brew cask install vox
 
 echo "======================================"
-echo "Install sequel pro"
-echo "======================================"
-brew cask install sequel-pro
-
-echo "======================================"
-echo "Install table plus"
-echo "======================================"
-brew cask install tableplus
-
-echo "======================================"
 echo "Install slack"
 echo "======================================"
 brew cask install slack
-
-echo "======================================"
-echo "Install notion"
-echo "======================================"
-brew cask install notion
-
-echo "======================================"
-echo "Install robo 3t"
-echo "======================================"
-brew cask install robo-3t
 
 echo "======================================"
 echo "Install logitech options"
