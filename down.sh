@@ -1,13 +1,3 @@
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
-
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 echo "Hello $(whoami)! Let's get you set up."
 
 echo "======================================"
@@ -40,7 +30,7 @@ echo "======================================"
 brew install python3
 
 echo "======================================"
-echo "Install go - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/go"
+echo "Install go"
 echo "======================================"
 brew install go
 
@@ -110,19 +100,34 @@ echo "======================================"
 brew install redis
 
 echo "======================================"
-echo "Install mongodb - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/mongo-db"
+echo "Install mongodb"
 echo "======================================"
 brew install mongodb
+sudo mkdir -p /data/db
+sudo chown -R `id -un` /data/db
 
 echo "======================================"
-echo "Install postgres - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/postgres-db"
+echo "Install postgres"
 echo "======================================"
 brew install postgres
+echo "Postgres Username"
+echo $USER
+pgUser=$(whoami)
+echo "What is your postgres password?"
+read pgPassword
+psql "ALTER USER $pgUser PASSWORD '$pgPassword'"
 
 echo "======================================"
-echo "Install mariadb - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/maria-db"
+echo "Install mariadb"
 echo "======================================"
 brew install mariadb
+echo "MariaDb Username"
+echo $USER
+mdbUser=$(whoami)
+echo "What is your mariaDB password?"
+read mdbPassword
+mysql "ALTER USER $mdbUser IDENTIFIED BY '$mdbPassword’;"
+mysql "FLUSH PRIVILEGES;"
 
 echo "======================================"
 echo "Install chrome"
@@ -165,7 +170,7 @@ echo "======================================"
 brew cask install hyperswitch
 
 echo "======================================"
-echo "Install iterm2 - NEED MORE SETUP. CHECK https://my-setup.gitbook.io/project/iterm"
+echo "Install iterm2"
 echo "======================================"
 brew cask install iterm2
 
@@ -210,6 +215,11 @@ echo "======================================"
 brew cask install homebrew/cask-versions/visual-studio-code-insiders
 
 echo "======================================"
+echo "Install vscodium"
+echo "======================================"
+brew cask install vscodium
+
+echo "======================================"
 echo "set vscode as default git editor"
 echo "======================================"
 git config --global core.editor "code --wait"
@@ -240,19 +250,32 @@ echo "======================================"
 brew cask install dropbox
 
 echo "======================================"
+echo "Install box"
+echo "======================================"
+brew cask install box-drive
+
+echo "======================================"
+echo "Install setapp"
+echo "======================================"
+brew cask install setapp
+
+echo "======================================"
+echo "Install cakebrew"
+echo "======================================"
+brew cask install cakebrew
+
+echo "======================================"
+echo "Install paragon-ntfs"
+echo "======================================"
+brew cask install paragon-ntfs
+
+echo "======================================"
+echo "Install itsycal"
+echo "======================================"
+brew cask install itsycal
+
+echo "======================================"
 echo "Install oh my zsh"
 echo "Install last, because it will need your confirmation to change terminal shell"
 echo "======================================"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "Finish install all app, check doc to complete these app setup : \n
-1. go \n
-3. ruby \n
-2. postgres \n
-3. maria db \n
-4. mongodb \n
-5. vscode \n
-6. vscode insider \n
-7. iterm2 \n"
-
-echo "PLEASE RESTART"
